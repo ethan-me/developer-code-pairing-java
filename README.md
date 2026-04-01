@@ -151,6 +151,20 @@ docker exec -it app-mysql-1 mysql -u root testdb
 - 数据库：`testdb`
 - 端口：动态映射
 
+### 本地调用 API
+
+应用启动后，可直接运行 `http/` 目录下的脚本发起真实 API 请求：
+
+```bash
+# 创建订单
+bash http/create_order.sh
+```
+
+```bash
+# 查询订单（替换脚本中 <ORDER_ID> 为实际 ID）
+bash http/get_order.sh
+```
+
 ---
 
 ## 🔨 构建和打包
